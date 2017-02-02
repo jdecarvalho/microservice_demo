@@ -24,6 +24,7 @@
 	</properties>
 
 	<modules>
+		<module>discovery</module>
 		<module>identity</module>
 		<module>hello</module>
 	</modules>

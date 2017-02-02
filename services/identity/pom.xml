@@ -46,16 +46,6 @@
 		</dependency>
 	</dependencies>
 
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>Brixton.SR3</version>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-
 	<build>
 		<plugins>
 			<plugin>

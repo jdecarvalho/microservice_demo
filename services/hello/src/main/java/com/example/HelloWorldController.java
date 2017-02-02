@@ -5,6 +5,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,8 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloWorldController {
 
-    // @Autowired
-    // private IdenCon
+    @Autowired
+    private DiscoveryClient discoveryClient;
 
     @RequestMapping("/hello/{id}")
     public ResponseEntity<String> hello(@PathVariable("id") String id) {
