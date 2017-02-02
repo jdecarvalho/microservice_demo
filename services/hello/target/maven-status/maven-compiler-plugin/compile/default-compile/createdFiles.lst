@@ -1,2 +1,4 @@
 com/example/HelloWorldController.class
+com/example/User.class
 com/example/DemoApplication.class
+com/example/IdentityClient.class

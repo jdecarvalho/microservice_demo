@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: a-hello-client
+
+#endpoints:
+#  restart:
+#    enabled: true
+#  shutdown:
+#    enabled: true
+
+server:
+  port: 7979
