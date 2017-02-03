@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-@FeignClient("http://a-identity-client")
+@FeignClient(value = "http://a-identity-client", fallback = IndentityClientImpl.class)
 public interface IdentityClient {
 
     @RequestMapping(value = "/nameFor/{id}", method = RequestMethod.GET)

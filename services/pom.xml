@@ -21,6 +21,8 @@
 		<module>discovery</module>
 		<module>identity</module>
 		<module>hello</module>
+		<module>hystrixDashboard</module>
+		<module>auth-server</module>
 	</modules>
 
 </project>

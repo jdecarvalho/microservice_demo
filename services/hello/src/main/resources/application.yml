@@ -1,12 +1,18 @@
+# server:
+#   port: 0
+
 spring:
   application:
     name: a-hello-client
+#   oauth2:
+#     resource:
+#       userInfoUri: http://localhost:9999/uaa/user
 
-#endpoints:
-#  restart:
-#    enabled: true
-#  shutdown:
-#    enabled: true
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://localhost:9999/uaa/user
 
-server:
-  port: 7979
+management:
+  security:
+    enabled: false
