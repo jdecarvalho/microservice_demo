@@ -1,5 +1,7 @@
 package com.example;
 
+import java.security.Principal;
+
 import javax.ws.rs.Consumes;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
@@ -7,6 +9,7 @@ import javax.ws.rs.core.MediaType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,7 +27,8 @@ public class HelloWorldController {
     }
 
     @RequestMapping("/hello/{id}")
-    public ResponseEntity<String> hello(@PathVariable("id") String id) {
+    public ResponseEntity<String> hello(@PathVariable("id") String id,
+            @RequestHeader(value = "Authorization") String authorizationHeader, Principal currentUser) {
         return ResponseEntity.ok().body("Hello new buddy " + identityClient.getName(id).getName());
     }
 
